@@ -17,10 +17,10 @@ Gem::Specification.new do |spec|
   spec.email                  = ['ricardo.p.brazao@gmail.com']
   spec.homepage               = 'http://github.com/RicardoBrazao/systematize'
 
-  spec.add_dependency('activerecord')
-  spec.add_dependency('railties')
+  spec.add_dependency('activerecord', '>= 3.2')
+  spec.add_dependency('railties', '>= 3.2')
 
-  spec.add_development_dependency 'pry'
-  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency('pry')
+  spec.add_development_dependency('rspec')
 
 end
