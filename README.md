@@ -12,16 +12,16 @@ Probably the sanner way of doing it is we firstly run the structure migrations a
 What if I have a new field that is initially populated taking into account another field, and after that we can delete that other field?
 Imagine the following scenario:
 - You have a `Post` model that initially has a boolean field called `:deleted`.
-- After some time, and some deleted `Posts`, you need to know when that post has been deleted. So you create a `:deleted_at` field that will contain the time os the deletion.
+- After some time, and some deleted `Posts`, you need to know when that post has been deleted. So you create a `:deleted_at` field that will contain the time of the deletion.
 - You can now delete the old `:deleted` field because it turned obsolete, so you create the migration to do it.
 
-On this scenario we will have 2 structure migrations (create the `:deleted_at` field and removing the `:deleted` field) and a data migration (go through all the Posts and add the time to `:deleted_at` if they are `:deleted`). With previous migration approach, running all the migrations would fail because when the data migration run we would have the `:deleted` field because it was deleted by the structure migration.
+On this scenario we will have 2 structure migrations (create the `:deleted_at` field and removing the `:deleted` field) and a data migration (go through all the Posts and add the time to `:deleted_at` if they are `:deleted`). With previous migration approach, running all the migrations would fail because when the data migration run we wouldn't have the `:deleted` field because it was deleted by the structure migration.
 
 This is when `systematize` comes in for the rescue 🚀
 
 ## Installation
 
-If your using a Gemfile, just add it to your project
+If you're using a Gemfile, just add it to your project
 <pre><code>#Gemfile
 gem 'systematize'
 </code></pre>
@@ -40,7 +40,7 @@ So as the structural migrations live in the `db/migrate` folder, the data migrat
 </pre></code>
 
 ## Usage
-After installing you'll se the following tasks pop-up:
+After installing you'll see the following tasks pop-up:
 
 <pre><code>$> bundle exec rake -T
 rake systematize:migrate       # Migrate the database
