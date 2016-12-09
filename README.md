@@ -1,51 +1,66 @@
 # systematize
 
-![shuffler.gif](https://s15.postimg.org/jupy0v0or/shuffler.gif)
+<p align="center">
+<img src="https://s15.postimg.org/jupy0v0or/shuffler.gif" width="100%" />
+</p>
 
-## Why this even exist ?
+## Why does this even exist ?
 
 So you can seperate the data and structure migrations in different folders, because you know organization and stuff.
 
 ## Installation
 
-If you're using a Gemfile, just add it to your project
-<pre><code>#Gemfile
+If you're using a `Gemfile`, just add it to your project
+```gemfile
+#Gemfile
 gem 'systematize'
-</code></pre>
+```
 
 Or just add it via `bundler`
-<pre><code>bundle install 'systematize'</code></pre>
+```gemfile
+bundle install 'systematize'
+```
 
 ## Structure
 So as the structural migrations live in the `db/migrate` folder, the data migrations shall live in the `db/data` folder:
 
-<pre><code>- app
+```gemfile
+- app
   |
   |-db
     |-data
     |-migrate
-</pre></code>
+```
 
 ## Usage
 After installing you'll see the following tasks pop-up:
 
-<pre><code>$> bundle exec rake -T
+```bash
+$> bundle exec rake -T
 rake systematize:migrate       # Migrate the database
 rake systematize:rollback      # Rollback the database (options: STEP=x, VERBOSE=false)
 rake systematize:rollback_all  # Rollback all the database
-</pre></code>
+```
 
 Now if you need to migrate the database you just need to run:
-<pre><code>bundle exec rake systematize:migrate</pre></code>
+```bash
+bundle exec rake systematize:migrate
+```
 
 Needing to rollback the previous migration? No problem.
-<pre><code>bundle exec rake systematize:rollback</pre></code>
+```bash
+bundle exec rake systematize:rollback
+```
 
 Need to rollback 2/3/4 migrations? I got you.
-<pre><code>bundle exec rake systematize:rollback STEP=2 </pre></code>
+```bash
+bundle exec rake systematize:rollback STEP=2
+```
 
 Made a mess so big you need to start fresh? Do it. (the migrations need to be reversible 😅)
-<pre><code>bundle exec rake systematize:rollback_all </pre></code>
+```bash
+bundle exec rake systematize:rollback_all
+```
 
 ## Why was this frankstein created ? 👹
 
@@ -73,3 +88,14 @@ This is when `systematize` comes in for the rescue 🚀
 ## TODO
 - [ ] Customizable folder configuration
 - [ ] Customizable transaction type configuration
+
+## Contributing
+I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure timely addition of your request:
+  1. If its a feature, bugfix, or anything please only change code to what you specify.
+  2. Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
+  3. Pull requests _must_ be made against `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
+  4. Check for existing [issues](https://github.com/brazunisdelamancha/milagre/issues) first, before filing an issue.
+  5. Have fun!
+
+### Created & Maintained By
+[Ricardo Brazunis](https://github.com/brazunisdelamancha) ([@ricardão](https://www.twitter.com/brazunisdelamancha))
