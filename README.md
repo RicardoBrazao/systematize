@@ -98,4 +98,4 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
   5. Have fun!
 
 ### Created & Maintained By
-[Ricardo Brazunis](https://github.com/brazunisdelamancha) ([@ricardão](https://www.twitter.com/brazunisdelamancha))
+[Ricardo Brazão](https://github.com/RicardoBrazao) ([@RicBrazao](https://www.twitter.com/RicBrazao))
