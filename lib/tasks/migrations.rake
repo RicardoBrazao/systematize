@@ -24,4 +24,14 @@ namespace :systematize do
       ActiveRecord::Migrator.migrate(temp_folder, 0)
     end
   end
+
+  desc "Create the database"
+  task :create => :environment do
+    Rake::Task["db:create"].invoke
+  end
+
+  desc "Drop the database"
+  task :drop => :environment do
+    Rake::Task["db:drop"].invoke
+  end
 end
