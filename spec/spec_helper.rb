@@ -1,5 +1,4 @@
 require 'rspec'
-require 'rails'
 require 'active_record'
 require 'systematize'
 require 'pry'
