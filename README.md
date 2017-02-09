@@ -40,6 +40,8 @@ $> bundle exec rake -T
 rake systematize:migrate       # Migrate the database
 rake systematize:rollback      # Rollback the database (options: STEP=x, VERBOSE=false)
 rake systematize:rollback_all  # Rollback all the database
+rake systematize:create        # Create the database
+rake systematize:drop          # Drop the database
 ```
 
 Now if you need to migrate the database you just need to run:
@@ -94,7 +96,7 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
   1. If its a feature, bugfix, or anything please only change code to what you specify.
   2. Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
   3. Pull requests _must_ be made against `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
-  4. Check for existing [issues](https://github.com/brazunisdelamancha/milagre/issues) first, before filing an issue.
+  4. Check for existing [issues](https://github.com/RicardoBrazao/systematize/issues) first, before filing an issue.
   5. Have fun!
 
 ### Created & Maintained By

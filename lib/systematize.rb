@@ -1,4 +1,4 @@
 module Systematize
-  require 'systematize/railtie'
+  require 'systematize/loader'
   require 'systematize/runner'
 end

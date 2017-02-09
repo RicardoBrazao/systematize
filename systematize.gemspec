@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.homepage               = 'http://github.com/RicardoBrazao/systematize'
 
   spec.add_dependency('activerecord', '>= 3.2')
-  spec.add_dependency('railties', '>= 3.2')
+  spec.add_dependency('rake')
 
   spec.add_development_dependency('pry')
   spec.add_development_dependency('rspec')
