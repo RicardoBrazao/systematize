@@ -1,7 +1,7 @@
 module Systematize
   class Runner
 
-    DB_FOLDER_PATH              = "#{Rack::Directory.new('').root}/db"
+    DB_FOLDER_PATH              = "#{Dir.pwd}/db"
     DATA_MIGRATIONS_PATH        = "#{DB_FOLDER_PATH}/data"
     STRUCTURE_MIGRATIONS_PATH   = "#{DB_FOLDER_PATH}/migrate"
     TEMP_MIGRATIONS_FOLDER_PATH = "#{DB_FOLDER_PATH}/tmp"
