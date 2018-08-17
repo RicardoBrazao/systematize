@@ -1,7 +1,7 @@
 # systematize
 
 <p align="center">
-<img src="https://s15.postimg.org/jupy0v0or/shuffler.gif" width="100%" />
+<img src="https://media.giphy.com/media/3h3sIevQFVzhsUEPsq/giphy.gif" width="100%" />
 </p>
 
 ## Why does this even exist ?
